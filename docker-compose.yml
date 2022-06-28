@@ -22,7 +22,7 @@ services:
     container_name: db
     environment: 
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: equipmentManagementApp
+      MYSQL_DATABASE: practice_market
       MYSQL_USER: test
       MYSQL_PASSWORD: test
       TZ: 'Asia/Tokyo' 
