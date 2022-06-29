@@ -11,6 +11,7 @@
 |
 */
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
@@ -24,6 +25,10 @@ Route::get('/users' ,'UserController@show')->name('users.show');
 
 //users/{user}/exhibitions
 Route::get('users/exhibitions', 'ItemController@exhibitions')->name('users.exhibitions');
+
+//
+Route::get('profile/edit', 'UserController@edit')->name('profile.edit');
+Route::patch('profile/edit', 'UserController@update')->name('profile.update');
 
 //
 Route::get('/likes', 'LikeController@index')->name('likes.index');
