@@ -10,15 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', 'ItemController@index')->name('top');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+//users{user}
+Route::get('/users' ,'UserController@show')->name('users.show');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//users/{user}/exhibitions
+Route::get('users/exhibitions', 'ItemController@exhibitions')->name('users.exhibitions');
+
+//
+Route::get('/likes', 'LikeController@index')->name('likes.index');
