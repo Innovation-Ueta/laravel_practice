@@ -6,3 +6,5 @@
 
     {{-- 一覧表示は items/index.blade.php 参考 --}}
 @endsection
+
+
