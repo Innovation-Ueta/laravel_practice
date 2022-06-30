@@ -4,12 +4,12 @@
     <h1>プロフィール詳細</h1>
 
     <div class="user_image">
-
+        <a href="">画像を変更</a>
     </div>
 
     <div>
         <p>test さん</p>
-        <a href="">プロフィール編集</a>
+        <a href="{{ route('profile.edit') }}">プロフィール編集</a>
     </div>
 
     <div>
